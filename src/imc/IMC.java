@@ -20,7 +20,7 @@ public class IMC {
         System.out.println("Digite a idade da pessoa (use vírgula para números fracionados): ");
         peso = Double.parseDouble(in.readLine());
         
-        CalculaIMC(sexo, altura, peso);
+        //CalculaIMC(sexo, altura, peso);
         
     }
     
