@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package imc;
 
-/**
- *
- * @author aluno
- */
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class IMC {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        
+        String sexo;
+        double altura, peso;
+        
+        System.out.println("Digite o sexo da pessoa: ");
+        sexo = in.readLine();
+        
+        
+        
     }
     
 }
