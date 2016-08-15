@@ -10,18 +10,21 @@ public class IMC {
         
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         
-        String sexo;
+        char sexo;
         double altura, peso;
         
-        System.out.println("Digite o sexo da pessoa: ");
-        sexo = in.readLine();
-        System.out.println("Digite a altura da pessoa (use vírgula para números fracionados): ");
-        altura = Double.parseDouble(in.readLine());
-        System.out.println("Digite a idade da pessoa (use vírgula para números fracionados): ");
-        peso = Double.parseDouble(in.readLine());
-        
-        //CalculaIMC(sexo, altura, peso);
-        
+        while (true){
+            System.out.println("Digite o sexo da pessoa: ");
+            sexo = (char) in.read();
+            in.readLine();
+            System.out.println("Digite a altura da(); pessoa (use ponto para números fracionados): ");
+            altura = Double.parseDouble(in.readLine());
+            System.out.println("Digite o peso da pessoa (use ponto para números fracionados): ");
+            peso = Double.parseDouble(in.readLine());
+
+            calculadoraIMC calculadoraimc = new calculadoraIMC();
+            System.out.println(calculadoraimc.calcula(sexo, altura, peso));
+        }
     }
     
 }
