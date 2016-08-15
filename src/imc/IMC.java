@@ -12,19 +12,24 @@ public class IMC {
         
         char sexo;
         double altura, peso;
+        calculadoraIMC calculadoraimc = new calculadoraIMC();
         
         while (true){
-            System.out.println("Digite o sexo da pessoa: ");
+            
+            System.out.println("Caso queira calcular o IMC de uma pessoa digite <Y>, caso contrário digite <N>:");
+            if (in.read() == 'N')
+                break;
+            in.readLine();
+            
+            System.out.println("Digite o sexo da pessoa <M>(Masculino) ou <F>(Feminino):");
             sexo = (char) in.read();
             in.readLine();
-            System.out.println("Digite a altura da(); pessoa (use ponto para números fracionados): ");
+            System.out.println("Digite a altura da pessoa (use ponto para números fracionados):");
             altura = Double.parseDouble(in.readLine());
-            System.out.println("Digite o peso da pessoa (use ponto para números fracionados): ");
+            System.out.println("Digite o peso da pessoa (use ponto para números fracionados):");
             peso = Double.parseDouble(in.readLine());
 
-            calculadoraIMC calculadoraimc = new calculadoraIMC();
             System.out.println(calculadoraimc.calcula(sexo, altura, peso));
         }
-    }
-    
+    } 
 }
